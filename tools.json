@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Airgeddon",
+    "category": "Wireless Security",
+    "description": "A multi-use bash script for Linux systems to audit wireless networks.",
+    "url": "https://github.com/v1s1t0r1sh3r3/airgeddon"
+  },
+  {
+    "name": "Zphisher",
+    "category": "Phishing",
+    "description": "An automated phishing tool with 30+ templates. For educational purposes only.",
+    "url": "https://github.com/htr-tech/zphisher"
+  },
+  {
+    "name": "NewTestTool",
+    "category": "Testing",
+    "description": "An updated description for the test tool.",
+    "url": "http://example.com/updated-testtool"
+  }
+]
