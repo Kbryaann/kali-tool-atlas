@@ -1,27 +1,27 @@
  # Kali Tool Atlas
-    2 #### Video Demo: <URL HERE>
-    3 
-    4 ## About Kali Tool Atlas
-    5 
-    6 The Kali Tool Atlas is a command-line interface (CLI) application designed to help cybersecurity students and enthusiasts efficiently organize,
+     #### Video Demo: <URL HERE>
+    
+     ## About Kali Tool Atlas
+    
+     The Kali Tool Atlas is a command-line interface (CLI) application designed to help cybersecurity students and enthusiasts efficiently organize,
       discover, and reference tools within the Kali Linux ecosystem.
-    7 
-    8 Kali Linux includes hundreds of specialized tools, which can make it difficult—especially for learners—to remember tool names, understand their
+     
+     Kali Linux includes hundreds of specialized tools, which can make it difficult—especially for learners—to remember tool names, understand their
       purposes, or quickly find official documentation. This project centralizes that information into a single, searchable, and user-managed CLI
       catalog, allowing users to focus more on learning and practical work rather than constantly searching.
-    9 
-   10 The Atlas solves common problems such as:
-   11 *   Forgetting tool names
-   12 *   Not knowing what a specific tool does
-   13 *   Difficulty locating official documentation
-   14 *   Constant context switching between the terminal and a web browser
-   15 
-   16 By providing a local, searchable index that runs entirely in the terminal, users can browse tools by category, search using keywords, view
+     
+    The Atlas solves common problems such as:
+    *   Forgetting tool names
+    *   Not knowing what a specific tool does
+    *   Difficulty locating official documentation
+    *   Constant context switching between the terminal and a web browser
+    
+    By providing a local, searchable index that runs entirely in the terminal, users can browse tools by category, search using keywords, view
       detailed information, and manage their own personalized list of cybersecurity tools.
-   17 
-   18 ### Target Audience
-   19 
-   20 The Kali Tool Atlas is designed for:
+    
+    ### Target Audience
+    
+    The Kali Tool Atlas is designed for:
    21 1.  Cybersecurity students
    22 2.  Beginners learning Kali Linux
    23 3.  Penetration testing learners
