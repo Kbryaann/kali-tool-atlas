@@ -183,4 +183,3 @@
    49 The Kali Tool Atlas is an educational and practical CLI application that simplifies the discovery and management of cybersecurity tools. This
       project demonstrates effective use of Python, command-line design, structured data storage, and thoughtful user experience design, while
       reflecting my personal learning journey in cybersecurity.
-
