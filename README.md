@@ -2,27 +2,29 @@
 #### Video Demo:  <URL HERE>
 #### Description:
 Kali Tool Atlas
-1. Overall Description (Introduction)
 
-Kali Tool Atlas is a command-line interface (CLI) application designed to help cybersecurity students and enthusiasts efficiently organize, discover, and reference tools within the Kali Linux ecosystem. Kali Linux contains hundreds of specialized tools, and keeping track of their names, purposes, and documentation can quickly become overwhelming, especially for learners.
+ Kali Tool Atlas
+Overall Description
 
-I created this project to solve that problem by building a simple, structured, and searchable catalog that runs directly in the terminal. Instead of relying on memory, browser bookmarks, or repeatedly searching online, users can quickly look up tools by category or keyword and access official documentation links from one centralized place.
+Kali Tool Atlas is a command-line interface (CLI) application designed to help cybersecurity students and enthusiasts efficiently organize, discover, and reference tools within the Kali Linux ecosystem.
 
-2. What is Kali Tool Atlas?
+Kali Linux includes hundreds of specialized tools, which can make it difficult—especially for learners—to remember tool names, understand their purposes, or quickly find official documentation. This project centralizes that information into a single, searchable, and user-managed CLI catalog, allowing users to focus more on learning and practical work rather than searching.
 
-In cybersecurity, users often face several challenges:
+What is Kali Tool Atlas?
+
+In the world of cybersecurity, users frequently face the following problems:
 
 Forgetting tool names
 
-Not remembering what a tool does
+Not knowing what a specific tool does
 
-Difficulty finding official documentation quickly
+Difficulty locating official documentation
 
-Constantly switching between the terminal and a web browser
+Constant context switching between the terminal and a web browser
 
-Kali Tool Atlas addresses these issues by providing a local, searchable index of cybersecurity tools. The application allows users to list tools by category, search for tools using partial keywords, view detailed information for a specific tool, and manage their own personalized tool database.
+Kali Tool Atlas solves these issues by providing a local, searchable index of tools that runs entirely in the terminal. Users can browse tools by category, search using keywords, view detailed information, and manage their own personalized list of cybersecurity tools.
 
-The target audience for this tool includes:
+Target Audience
 
 Cybersecurity students
 
@@ -32,40 +34,30 @@ Penetration testing learners
 
 Anyone who wants a lightweight CLI reference for security tools
 
-By reducing cognitive load and time spent searching for information, Kali Tool Atlas helps users focus more on learning and practical work.
-
-3. Features
+Features
 list
 
-Displays all tools stored in the Atlas, grouped by category. This allows users to easily browse related tools and discover what is available within a specific domain, such as network scanning or web security.
+Displays all tools grouped by category
 
-Output is formatted using the rich library for readability.
+Makes it easy to browse related tools
 
-Categories are clearly separated.
-
-Usage:
+Output is formatted using the rich library for readability
 
 python main.py list
 
 search <query>
 
-Searches for tools using a keyword. The search is:
+Searches both tool names and descriptions
 
 Case-insensitive
 
-Partial-match based
-
-Applied to both tool names and descriptions
-
-This is useful when the user remembers only part of a tool’s name or function.
-
-Usage:
+Supports partial keyword matching
 
 python main.py search scan
 
 show <tool_name>
 
-Displays detailed information about a specific tool, including:
+Displays full details for a specific tool:
 
 Name
 
@@ -73,29 +65,19 @@ Category
 
 Description
 
-Official documentation or repository URL
+Documentation URL
 
-Tool name matching is case-insensitive.
-
-Usage:
+Tool name matching is case-insensitive
 
 python main.py show Nmap
 
 add
 
-Adds a new tool to the Atlas. This command requires all fields to be provided and prevents duplicate tool names to maintain data integrity.
+Adds a new tool to the Atlas
 
-Required fields:
+Requires all fields to be provided
 
-Name
-
-Category
-
-Description
-
-URL
-
-Usage:
+Prevents duplicate tool names to maintain data integrity
 
 python main.py add --name "Nmap" \
                   --category "Network Scanning" \
@@ -104,41 +86,45 @@ python main.py add --name "Nmap" \
 
 remove <tool_name>
 
-Removes an existing tool from the Atlas. If the specified tool does not exist, the program displays an error message instead of silently failing.
+Removes an existing tool from the Atlas
 
-Usage:
+Displays an error message if the tool does not exist
 
 python main.py remove Nmap
 
 edit <tool_name>
 
-Edits an existing tool’s information. This allows users to update fields such as the name, category, description, or URL without removing and re-adding the tool.
+Updates an existing tool’s information
 
-Usage:
+Allows modification of one or more fields without re-adding the tool
 
 python main.py edit Nmap --description "Updated description"
 
-4. How to Run
+How to Run
 
-Follow these steps to set up and run Kali Tool Atlas locally.
+Follow the steps below to set up and run Kali Tool Atlas locally.
 
-1. Clone the repository
+1. Clone the Repository
+<span style="color:#1f6feb; font-weight:600;"> Clone the project from GitHub to your local machine: </span>
 git clone https://github.com/Kbryaann/kali-tool-atlas.git
 
-2. Navigate to the project directory
+2. Navigate to the Project Directory
+<span style="color:#1f6feb; font-weight:600;"> Change into the project folder: </span>
 cd kali-tool-atlas
 
-3. Create and activate a virtual environment
+3. Create and Activate a Virtual Environment
+<span style="color:#1f6feb; font-weight:600;"> Create a Python virtual environment: </span>
 python3 -m venv .venv
+
+<span style="color:#1f6feb; font-weight:600;"> Activate the virtual environment: </span>
 source .venv/bin/activate
 
-4. Install dependencies
+4. Install Dependencies
+<span style="color:#1f6feb; font-weight:600;"> Install required Python libraries: </span>
 pip install rich
 
-5. Run the application
-
-Examples:
-
+5. Run the Application
+<span style="color:#1f6feb; font-weight:600;"> Use the following commands to interact with Kali Tool Atlas: </span>
 python main.py list
 python main.py search web
 python main.py show Nmap
@@ -146,52 +132,56 @@ python main.py add --name "ToolName" --category "Category" --description "Descri
 python main.py remove ToolName
 python main.py edit ToolName --category "New Category"
 
-5. File Structure
+File Structure
+kali-tool-atlas/
+├── main.py
+├── tools.json
+├── .gitignore
 
-The project consists of the following files:
+File Descriptions
 
 main.py
-The main application file. It handles command-line argument parsing using argparse, loads and saves tool data, and implements all commands (list, search, show, add, remove, edit). It also integrates the rich library for improved terminal output.
+The core application file. Handles command-line argument parsing with argparse, loads and saves tool data, and implements all CLI commands. It also integrates the rich library for formatted terminal output.
 
 tools.json
-A JSON file used as the persistent data store for all tools. Each tool entry includes its name, category, description, and URL.
+A JSON file used as persistent storage for tool data. Each entry includes a name, category, description, and documentation URL.
 
 .gitignore
-Specifies files and directories (such as virtual environments and cache files) that should not be tracked by Git.
+Prevents unnecessary files (such as virtual environments and cache files) from being tracked by Git.
 
-6. Design Choices
+Design Choices
 Why Python?
 
-Python was chosen for its readability, simplicity, and strong standard library support. These qualities align well with CS50’s emphasis on clear, understandable code. Python also makes it easy to implement command-line tools, file I/O, and structured data handling.
+Python was chosen for its readability, simplicity, and strong standard library support. These qualities align well with CS50’s emphasis on clean, understandable code and made it ideal for building a CLI application.
 
-Why JSON instead of a database?
+Why JSON Instead of a Database?
 
-For a small-scale CLI application, using a JSON file provides a lightweight and dependency-free solution. JSON is human-readable, easy to modify, and sufficient for storing structured tool data without the overhead of setting up a database system.
+For a small-scale CLI project, JSON provides a lightweight, dependency-free storage solution. It is human-readable, easy to maintain, and sufficient for the scope of this application.
 
 Why argparse?
 
-The argparse module provides a clean and standardized way to handle command-line arguments and subcommands. It allows the application to behave like a professional CLI tool while also automatically generating help messages.
+The argparse module enables clean handling of commands and arguments while automatically generating helpful usage messages, making the tool intuitive and professional.
 
 Why rich?
 
-The rich library was used to improve terminal output readability. By formatting tables and headings, it makes browsing and searching tools easier and more pleasant for users.
+The rich library enhances the terminal experience by improving readability through formatted tables and styled output.
 
 Case-Insensitive Matching & Unique Names
 
-Tool names are handled in a case-insensitive manner to reduce user error. Enforcing unique tool names prevents duplicates and ensures consistent behavior when searching, editing, or removing tools.
+Case-insensitive matching reduces user error, while enforcing unique tool names ensures consistent behavior across all commands.
 
-7. Future Improvements
+Future Improvements
 
-While Kali Tool Atlas is fully functional, several enhancements could be added in the future:
+Possible future enhancements include:
 
-Tag System: Allow tools to have multiple tags for more flexible categorization.
+Tag-based categorization for more flexible organization
 
-Fuzzy Search: Improve search results when users make typos or approximate queries.
+Fuzzy search to improve results when users make typos
 
-Automatic Updates: Fetch tool information from official online sources to keep entries up to date.
+Automatic updates from official online documentation sources
 
-Tool Installation/Execution Integration: Optionally integrate with system package managers to install or run tools directly, with clear warnings and user confirmation.
+Optional tool installation or execution integration with explicit warnings and user confirmation
 
 Conclusion
 
-Kali Tool Atlas is a practical, educational CLI application that helps organize and manage cybersecurity tools in a structured way. This project demonstrates my understanding of Python, command-line application design, file-based data storage, and user-focused problem solving, while also reflecting my personal learning journey in cybersecurity.
+Kali Tool Atlas is an educational and practical CLI application that simplifies the discovery and management of cybersecurity tools. This project demonstrates effective use of Python, command-line design, structured data storage, and thoughtful user experience design, while reflecting my personal learning journey in cybersecurity.
