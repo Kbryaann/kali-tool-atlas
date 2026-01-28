@@ -37,71 +37,71 @@
       related tools.
   python main.py list
 
-   1 
-   2 ### `search <query>`
-   3 
-   4 Searches for tools by matching keywords against both their names and descriptions. The search is case-insensitive and supports partial keyword
+    
+    ### `search <query>`
+    
+    Searches for tools by matching keywords against both their names and descriptions. The search is case-insensitive and supports partial keyword
      matching.
   python main.py search scan
 
-   1 
-   2 ### `show <tool_name>`
-   3 
-   4 Displays comprehensive details for a specific tool, including its Name, Category, Description, and Documentation URL. Tool name matching is case
+    
+    ### `show <tool_name>`
+    
+    Displays comprehensive details for a specific tool, including its Name, Category, Description, and Documentation URL. Tool name matching is case
      -insensitive.
   python main.py show Nmap
 
-   1 
-   2 ### `add`
-   3 
-   4 Adds a new tool to the Atlas. This command requires all fields (`--name`, `--category`, `--description`, `--url`) to be provided and includes a
+    
+    ### `add`
+    
+    Adds a new tool to the Atlas. This command requires all fields (`--name`, `--category`, `--description`, `--url`) to be provided and includes a
      check to prevent adding tools with duplicate names, ensuring data integrity.
   python main.py add --name "Nmap" \
                     --category "Network Scanning" \
                     --description "A powerful network scanning tool." \
                     --url "https://nmap.org"
-   1 
-   2 ### `remove <tool_name>`
-   3 
-   4 Removes an existing tool from the Atlas. If the specified tool does not exist, an informative error message is displayed.
+   
+    ### `remove <tool_name>`
+    
+    Removes an existing tool from the Atlas. If the specified tool does not exist, an informative error message is displayed.
   python main.py remove Nmap
 
-   1 
-   2 ### `edit <tool_name>`
-   3 
-   4 Updates an existing tool’s information. This command allows modification of one or more fields (`--name`, `--category`, `--description`, `--url`)
+    
+    ### `edit <tool_name>`
+    
+    Updates an existing tool’s information. This command allows modification of one or more fields (`--name`, `--category`, `--description`, `--url`)
      without needing to re-add the entire tool.
   python main.py edit Nmap --description "Updated description for Nmap" --category "Network Reconnaissance"
 
-   1 
-   2 ## How to Run
-   3 
-   4 Follow the steps below to set up and run Kali Tool Atlas locally on your system.
-   5 
-   6 1.  **Clone the Repository**
-   7     Clone the project from GitHub to your local machine:
+    
+    ## How to Run
+   
+    Follow the steps below to set up and run Kali Tool Atlas locally on your system.
+    
+    1.  **Clone the Repository**
+       Clone the project from GitHub to your local machine:
       git clone https://github.com/Kbryaann/kali-tool-atlas.git
 
-   1 
-   2 2.  **Navigate to the Project Directory**
-   3     Change your current directory to the project folder:
+    
+    2.  **Navigate to the Project Directory**
+        Change your current directory to the project folder:
       cd kali-tool-atlas/project
-   1 
-   2 3.  **Create and Activate a Virtual Environment**
-   3     Create a Python virtual environment to manage dependencies:
+    
+    3.  **Create and Activate a Virtual Environment**
+        Create a Python virtual environment to manage dependencies:
       python3 -m venv .venv
-   1     Activate the virtual environment:
+        Activate the virtual environment:
       source .venv/bin/activate  # On Linux/macOS
   .venv\Scripts\activate   # On Windows (Command Prompt)
   .venv\Scripts\Activate.ps1 # On Windows (PowerShell)
-   1 
-   2 4.  **Install Dependencies**
-   3     Install the required Python libraries (e.g., `rich`) into your virtual environment:
+    
+    4.  **Install Dependencies**
+        Install the required Python libraries (e.g., `rich`) into your virtual environment:
       pip install rich
 
-   1 
-   2 5.  **Run the Application**
-   3     You can now use the `python main.py` command followed by any of the available features:
+    
+    5.  **Run the Application**
+        You can now use the `python main.py` command followed by any of the available features:
       python main.py list
       python main.py search web
       python main.py show Nmap
