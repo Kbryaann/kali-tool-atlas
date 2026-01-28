@@ -1,106 +1,103 @@
 # Kali Tool Atlas
 #### Video Demo:  <URL HERE>
-#### Description:
-Kali Tool Atlas
 
-Kali Tool Atlas
 ## Overall Description
 
 Kali Tool Atlas is a command-line interface (CLI) application designed to help cybersecurity students and enthusiasts efficiently organize, discover, and reference tools within the Kali Linux ecosystem.
 
 Kali Linux includes hundreds of specialized tools, which can make it difficult—especially for learners—to remember tool names, understand their purposes, or quickly find official documentation. This project centralizes that information into a single, searchable, and user-managed CLI catalog, allowing users to focus more on learning and practical work rather than searching.
 
-What is Kali Tool Atlas?
+## What is Kali Tool Atlas?
 
 In the world of cybersecurity, users frequently face the following problems:
 
-Forgetting tool names
+- Forgetting tool names
 
-Not knowing what a specific tool does
+- Not knowing what a specific tool does
 
-Difficulty locating official documentation
+- Difficulty locating official documentation
 
-Constant context switching between the terminal and a web browser
+- Constant context switching between the terminal and a web browser
 
 Kali Tool Atlas solves these issues by providing a local, searchable index of tools that runs entirely in the terminal. Users can browse tools by category, search using keywords, view detailed information, and manage their own personalized list of cybersecurity tools.
 
-Target Audience
+### Target Audience
 
-Cybersecurity students
+1.Cybersecurity students
 
-Beginners learning Kali Linux
+2.Beginners learning Kali Linux
 
-Penetration testing learners
+3.Penetration testing learners
 
-Anyone who wants a lightweight CLI reference for security tools
+4.Anyone who wants a lightweight CLI reference for security tools
 
-Features
-list
+## Features
+### list
 
-Displays all tools grouped by category
+- Displays all tools grouped by category
 
-Makes it easy to browse related tools
+- Makes it easy to browse related tools
 
-Output is formatted using the rich library for readability
+- Output is formatted using the rich library for readability
 
-python main.py list
+*python main.py list*
 
-search <query>
+### search <query>
 
-Searches both tool names and descriptions
+- Searches both tool names and descriptions
 
-Case-insensitive
+- Case-insensitive
 
-Supports partial keyword matching
+- Supports partial keyword matching
 
-python main.py search scan
+**python main.py search scan**
 
-show <tool_name>
+### show <tool_name>
 
 Displays full details for a specific tool:
 
-Name
+- Name
 
-Category
+- Category
 
-Description
+- Description
 
-Documentation URL
+- Documentation URL
 
 Tool name matching is case-insensitive
 
-python main.py show Nmap
+***python main.py show Nmap***
 
-add
+### add
 
-Adds a new tool to the Atlas
+- Adds a new tool to the Atlas
 
-Requires all fields to be provided
+- Requires all fields to be provided
 
-Prevents duplicate tool names to maintain data integrity
+- Prevents duplicate tool names to maintain data integrity
 
-python main.py add --name "Nmap" \
+*python main.py add --name "Nmap" \
                   --category "Network Scanning" \
                   --description "A powerful network scanning tool." \
-                  --url "https://nmap.org"
+                  --url "https://nmap.org"*
 
-remove <tool_name>
+### remove <tool_name>
 
-Removes an existing tool from the Atlas
+- Removes an existing tool from the Atlas
 
-Displays an error message if the tool does not exist
+- Displays an error message if the tool does not exist
 
-python main.py remove Nmap
+****python main.py remove Nmap****
 
-edit <tool_name>
+### edit <tool_name>
 
-Updates an existing tool’s information
+- Updates an existing tool’s information
 
-Allows modification of one or more fields without re-adding the tool
+- Allows modification of one or more fields without re-adding the tool
 
-python main.py edit Nmap --description "Updated description"
+**python main.py edit Nmap --description "Updated description"**
 
-How to Run
+## How to Run
 
 Follow the steps below to set up and run Kali Tool Atlas locally.
 
@@ -182,6 +179,6 @@ Automatic updates from official online documentation sources
 
 Optional tool installation or execution integration with explicit warnings and user confirmation
 
-Conclusion
+#*Conclusion*#
 
 Kali Tool Atlas is an educational and practical CLI application that simplifies the discovery and management of cybersecurity tools. This project demonstrates effective use of Python, command-line design, structured data storage, and thoughtful user experience design, while reflecting my personal learning journey in cybersecurity.
