@@ -34,28 +34,28 @@
     ### `list`
     
     Displays all tools grouped by category. The output is formatted using the `rich` library for enhanced readability, making it easy to browse
-      related tools.
+    related tools.
   python main.py list
 
     
     ### `search <query>`
     
     Searches for tools by matching keywords against both their names and descriptions. The search is case-insensitive and supports partial keyword
-     matching.
+    matching.
   python main.py search scan
 
     
     ### `show <tool_name>`
     
     Displays comprehensive details for a specific tool, including its Name, Category, Description, and Documentation URL. Tool name matching is case
-     -insensitive.
+    -insensitive.
   python main.py show Nmap
 
     
     ### `add`
     
     Adds a new tool to the Atlas. This command requires all fields (`--name`, `--category`, `--description`, `--url`) to be provided and includes a
-     check to prevent adding tools with duplicate names, ensuring data integrity.
+    check to prevent adding tools with duplicate names, ensuring data integrity.
   python main.py add --name "Nmap" \
                     --category "Network Scanning" \
                     --description "A powerful network scanning tool." \
@@ -70,7 +70,7 @@
     ### `edit <tool_name>`
     
     Updates an existing tool’s information. This command allows modification of one or more fields (`--name`, `--category`, `--description`, `--url`)
-     without needing to re-add the entire tool.
+    without needing to re-add the entire tool.
   python main.py edit Nmap --description "Updated description for Nmap" --category "Network Reconnaissance"
 
     
@@ -78,18 +78,18 @@
    
     Follow the steps below to set up and run Kali Tool Atlas locally on your system.
     
-    1.  **Clone the Repository**
+    1. **Clone the Repository**
        Clone the project from GitHub to your local machine:
       git clone https://github.com/Kbryaann/kali-tool-atlas.git
 
     
     2.  **Navigate to the Project Directory**
         Change your current directory to the project folder:
-      cd kali-tool-atlas/project
+       cd kali-tool-atlas/project
     
     3.  **Create and Activate a Virtual Environment**
         Create a Python virtual environment to manage dependencies:
-      python3 -m venv .venv
+       python3 -m venv .venv
         Activate the virtual environment:
       source .venv/bin/activate  # On Linux/macOS
   .venv\Scripts\activate   # On Windows (Command Prompt)
