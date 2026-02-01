@@ -4,11 +4,11 @@
      ## About Kali Tool Atlas
     
      The Kali Tool Atlas is a command-line interface (CLI) application designed to help cybersecurity students and enthusiasts efficiently organize,
-      discover, and reference tools within the Kali Linux ecosystem.
+     discover, and reference tools within the Kali Linux ecosystem.
      
      Kali Linux includes hundreds of specialized tools, which can make it difficult—especially for learners—to remember tool names, understand their
-      purposes, or quickly find official documentation. This project centralizes that information into a single, searchable, and user-managed CLI
-      catalog, allowing users to focus more on learning and practical work rather than constantly searching.
+     purposes, or quickly find official documentation. This project centralizes that information into a single, searchable, and user-managed CLI
+     catalog, allowing users to focus more on learning and practical work rather than constantly searching.
      
     The Atlas solves common problems such as:
     *   Forgetting tool names
@@ -78,28 +78,26 @@
    
     Follow the steps below to set up and run Kali Tool Atlas locally on your system.
     
-    1. **Clone the Repository**
-       Clone the project from GitHub to your local machine:
+    1.**Clone the Repository**
+      
       git clone https://github.com/Kbryaann/kali-tool-atlas.git
 
-    
-    2.  **Navigate to the Project Directory**
-        Change your current directory to the project folder:
+    2. **Navigate to the Project Directory**
+       
        cd kali-tool-atlas/project
     
     3.  **Create and Activate a Virtual Environment**
-        Create a Python virtual environment to manage dependencies:
+        
        python3 -m venv .venv
         Activate the virtual environment:
-      source .venv/bin/activate  # On Linux/macOS
+       source .venv/bin/activate  # On Linux/macOS
   .venv\Scripts\activate   # On Windows (Command Prompt)
   .venv\Scripts\Activate.ps1 # On Windows (PowerShell)
     
     4.  **Install Dependencies**
-        Install the required Python libraries (e.g., `rich`) into your virtual environment:
+       
       pip install rich
-
-    
+ 
     5.  **Run the Application**
         You can now use the `python main.py` command followed by any of the available features:
       python main.py list
