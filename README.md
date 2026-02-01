@@ -90,6 +90,7 @@
         
        python3 -m venv .venv
         Activate the virtual environment:
+        
        source .venv/bin/activate  # On Linux/macOS
   .venv\Scripts\activate   # On Windows (Command Prompt)
   .venv\Scripts\Activate.ps1 # On Windows (PowerShell)
@@ -135,33 +136,33 @@
     ### Why Python?
     
     Python was chosen for its readability, simplicity, and strong standard library support. These qualities align well with CS50’s emphasis on clean,
-      understandable code and made it ideal for building a CLI application. Its extensive ecosystem also provided powerful libraries like `argparse` and
-      `rich` that significantly enhanced development.
+    understandable code and made it ideal for building a CLI application. Its extensive ecosystem also provided powerful libraries like `argparse` and
+    `rich` that significantly enhanced development.
     
     ### Why JSON Instead of a Database?
     
     For a small-scale CLI project like the Kali Tool Atlas, using a JSON file (`tools.json`) for data storage offered several advantages over a
-      traditional database. It eliminated the need for external database server dependencies, simplifying setup and deployment. JSON's human-readable 
-      format also made it easy to inspect and manually edit the tool data if necessary. While a database might be more scalable for larger datasets, 
-      JSON provided sufficient flexibility and performance for this project's scope, keeping the solution lightweight and self-contained.
+    traditional database. It eliminated the need for external database server dependencies, simplifying setup and deployment. JSON's human-readable 
+    format also made it easy to inspect and manually edit the tool data if necessary. While a database might be more scalable for larger datasets, 
+    JSON provided sufficient flexibility and performance for this project's scope, keeping the solution lightweight and self-contained.
     
     ### Why `argparse`?
     
     The `argparse` module was selected for handling command-line arguments due to its robustness and ease of use. It allows for defining subcommands (
-      `list`, `search`, `add`, etc.) and their respective arguments, automatically generating helpful usage messages and error handling. This makes the
-      tool intuitive for users and simplifies the parsing logic within the `main.py` script.
+    `list`, `search`, `add`, etc.) and their respective arguments, automatically generating helpful usage messages and error handling. This makes the
+    tool intuitive for users and simplifies the parsing logic within the `main.py` script.
    
     ### Why `rich`?
     
     The `rich` library was integrated to significantly enhance the terminal user experience. It provides beautiful and readable output through
-      features like colored text, panels, and columns. This transforms a standard text-based CLI into a more professional and engaging application,
-      making information easier to digest and improving overall usability.
+    features like colored text, panels, and columns. This transforms a standard text-based CLI into a more professional and engaging application,
+    making information easier to digest and improving overall usability.
     
     ### Case-Insensitive Matching & Unique Names
     
     Implementing case-insensitive matching for tool names (in `search`, `show`, `remove`, `edit`) reduces user error and improves the tool's 
-      flexibility. Simultaneously, enforcing unique tool names during the `add` and `edit` operations ensures data consistency and prevents ambiguity 
-      across all commands, leading to a more reliable and predictable user experience.
+    flexibility. Simultaneously, enforcing unique tool names during the `add` and `edit` operations ensures data consistency and prevents ambiguity 
+    across all commands, leading to a more reliable and predictable user experience.
     
     ## Future Improvements
     
@@ -179,5 +180,5 @@
     ## Conclusion
    
     The Kali Tool Atlas is an educational and practical CLI application that simplifies the discovery and management of cybersecurity tools. This
-      project demonstrates effective use of Python, command-line design, structured data storage, and thoughtful user experience design, while
-      reflecting my personal learning journey in cybersecurity.
+    project demonstrates effective use of Python, command-line design, structured data storage, and thoughtful user experience design, while
+    reflecting my personal learning journey in cybersecurity.
