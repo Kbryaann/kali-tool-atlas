@@ -104,7 +104,8 @@
       python main.py list
       python main.py search web
       python main.py show Nmap
-      python main.py add --name "ToolName" --category "Category" --description "Description" --url "URL"
+      python main.py add --name "ToolName" --category "Category" 
+      -- description "Description" --url "URL"
       python main.py remove ToolName
       python main.py edit ToolName --category "New Category"
 
